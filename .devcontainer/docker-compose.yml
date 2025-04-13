@@ -8,7 +8,7 @@ services:
       dockerfile: .devcontainer/Dockerfile
     command: sleep infinity
     volumes:
-      - ..:/workspaces/pandas:cached
+      - ..:/workspaces/learning_pandas
     networks:
       - survey-net
 

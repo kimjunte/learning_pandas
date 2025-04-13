@@ -3,7 +3,7 @@
   "dockerComposeFile": "docker-compose.yml",
   "service": "learning-pandas",
   "remoteUser": "vscode",
-  "workspaceFolder": "/workspaces/pandas_is_for_everyone",
+  "workspaceFolder": "/workspaces/learning_pandas",
   "postStartCommand": "bash .devcontainer/post-install.sh",
   "mounts": [
     "source=${localEnv:HOME},target=/workspaces/home,type=bind",
@@ -12,7 +12,7 @@
   "customizations": {
     "vscode": {
       "settings": {
-        "files.defaultWorkspace": "/workspaces/pandas_is_for_everyone"
+        "files.defaultWorkspace": "/workspaces/learning_pandas"
       },
       "extensions": [
         "ms-python.python",
