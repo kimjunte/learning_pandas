@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  learning-pandas:
+    user: "${UID}:${GID}"
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    command: sleep infinity
+    networks:
+      - survey-net
+
+networks:
+  survey-net:
+    driver: bridge
+
+volumes:
+  postgres-data:

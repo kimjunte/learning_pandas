@@ -1,0 +1,27 @@
+{
+  "name": "Basic Python",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "learning-pandas",
+  "remoteUser": "vscode",
+  "workspaceFolder": "/workspaces/survey-extractor",
+  "postStartCommand": "bash .devcontainer/post-install.sh",
+  "mounts": [
+    "source=${localEnv:HOME},target=/workspaces/home,type=bind",
+    "source=${localEnv:HOME}/.aws/,target=/home/vscode/.aws/,type=bind"
+  ],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "files.defaultWorkspace": "/workspaces/survey-extractor"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "mechatroner.rainbow-csv",
+        "ms-toolsai.datawrangler",
+        "lindacong.vscode-book-reader",
+        "4ops.terraform"
+      ]
+    }
+  }
+}
