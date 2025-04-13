@@ -3,7 +3,7 @@
   "dockerComposeFile": "docker-compose.yml",
   "service": "learning-pandas",
   "remoteUser": "vscode",
-  "workspaceFolder": "/workspaces/survey-extractor",
+  "workspaceFolder": "/workspaces/pandas",
   "postStartCommand": "bash .devcontainer/post-install.sh",
   "mounts": [
     "source=${localEnv:HOME},target=/workspaces/home,type=bind",
@@ -12,7 +12,7 @@
   "customizations": {
     "vscode": {
       "settings": {
-        "files.defaultWorkspace": "/workspaces/survey-extractor"
+        "files.defaultWorkspace": "/workspaces/pandas"
       },
       "extensions": [
         "ms-python.python",

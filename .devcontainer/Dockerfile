@@ -18,4 +18,4 @@ RUN useradd -m -s /usr/bin/bash ${USER} \
 RUN pip install --no-cache-dir poetry
 
 # Set the working directory
-WORKDIR /workspaces/survey-extractor
+WORKDIR /workspaces/pandas

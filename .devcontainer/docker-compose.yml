@@ -7,6 +7,8 @@ services:
       context: ..
       dockerfile: .devcontainer/Dockerfile
     command: sleep infinity
+    volumes:
+      - ..:/workspaces/pandas:cached
     networks:
       - survey-net
 

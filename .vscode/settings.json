@@ -1,0 +1,11 @@
+{
+    "jupyter.interactiveWindow.textEditor.executeSelection": true,
+    "python.REPL.sendToNativeREPL": true
+
+    // Hot reload setting that needs to be in user settings
+    // "jupyter.runStartupCommands": [
+    //     "%load_ext autoreload", "%autoreload 2"
+    // ]
+
+
+}
