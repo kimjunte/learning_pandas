@@ -18,4 +18,4 @@ RUN useradd -m -s /usr/bin/bash ${USER} \
 RUN pip install --no-cache-dir poetry
 
 # Set the working directory
-WORKDIR /workspaces/pandas
+WORKDIR /workspaces/pandas_is_for_everyone

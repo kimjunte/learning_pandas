@@ -1,9 +1,9 @@
 [project]
-name = "pandas"
+name = "pandas_is_for_everyone"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "Jun-te Kim",email = "junte@domna.homes"}
+    {name = "Jun-te Kim",email = "junte@mealcraft.co"}
 ]
 readme = "README.md"
 requires-python = ">=3.12"
