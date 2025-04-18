@@ -104,5 +104,13 @@ flat_example = a.reset_index()
 
 # 1.4.2 Group Frequency count example
 
+df.groupby('continent')['country'].nunique()
+df.groupby('continent')['country'].value_counts()
+
+# 1.5 Basic plot
+global_yearly_life_expectancy = df.groupby('year')['lifeExp'].mean()
+type(global_yearly_life_expectancy)
+global_yearly_life_expectancy
+global_yearly_life_expectancy.plot()
 
 
