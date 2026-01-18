@@ -4,14 +4,16 @@ import pandas as pd
 
 df = pd.read_csv('../data/gapminder.tsv', sep='\t')
 
+type(df)
+df.shape # (1704, 6) => (rows, columns)
+
 # Displays the first 5 rows in the dataframe
 df.head()
 
+
 # Every Datafram object has a shape attribute to tell you its rows and columns
-df.shape # (1704, 6) => (rows, columns)
 
 # To see what columns are defined in df
-
 df.columns
 
 # Each column (Series) has the same type, where as each row has many different types
@@ -34,21 +36,28 @@ datetime64      datetime        datetime is found in the Python standard library
 
 # Subsetting columns by name
 country_df = df['country']
+country_df
 country_df.shape
 country_df.head()
 country_df.tail()
 
 # Multiple columns
 subset = df[['country', 'continent', 'year']]
+subset
 subset.shape
 subset.head()
 subset.tail()
 
 # 1.3.2 Subsetting Rows - Intro to loc and iloc
+df
 df.loc[0] # Prints out the first row ( As a series )
+df.loc[-1]
 df.loc[df.shape[0] -1] # Prints out the last element ( As a series )
 df.tail(1) # Also prints out the last element ( As a dataframe )
+
+
 df.loc[[0,99,999]] # Prints out the first, 100th and 1000th row as a df
+
 # iloc and loc are the same except when loc is used as time series or other labels thats not index.
 # iloc forces use of index location
 df.iloc[0] # Prints out the first row ( As a series )
@@ -59,12 +68,21 @@ df.iloc[-1] # This works in index loc unlike loc where it tries to match the ite
 # If indexing, user iloc if matching use loc etc
 
 # 1.3.3 Using the second argument in iloc df[[row],[columns]]
-
+df
 df.loc[:, ['year', 'pop']] # Gets every row with year and pop columns
 df.iloc[:, [2, 4, -1]] # iloc allow allows us to use integers, -1 from python slicing will allow us to get the last value
-df.iloc[:, :3] # every row for first 3 columns
+df.iloc[:, :3] # every row : every column but the last 3
 df.iloc[:, 3:6] # every row column 3,4,5
 df.iloc[:, 0:6:2] # every row for 0,2,4
+
+df
+df.iloc[:, 0:6:]
+df.iloc[:,0::2]
+df.iloc[:, :6:2] # country year pop
+df.iloc[:, ::]
+
+# i'm up to here
+
 
 # 1.3.3.4 Subsetting rows as well as columns
 
